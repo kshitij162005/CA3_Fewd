@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EasyPeasyEats</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</head>
+
+<body>
+    <nav>
+        <h4>💛 OUR RECIPES, YOUR INBOX</h4>
+    </nav>
+    <div class="maincontainer">
+        <div class="headingcontainer">
+            <div class="heading">
+                <img src="../Elements/Untitled_design-removebg-preview.png" alt="">
+
+            </div>
+            <div class="logo">
+                <img src="../Elements/EasyPeasyEats-removebg-preview (1).png" alt="">
+
+            </div>
+        </div>
+        <div class="about">
+            <div class="aboutdescription">
+                 <p>EasyPeasyEats: Your culinary companion for stress-free, mouthwatering meals. Discover personalized recipes effortlessly, tailored to your taste. We simplify cooking with daily meal suggestions, making it easy for you to enjoy delicious dishes every day. Whether you're a seasoned chef or a beginner, EasyPeasyEats is your go-to source for simple, delightful cooking. Explore, cook, and savor the joy of hassle-free meals at your fingertips.</p>
+            </div>
+        </div>
+        <div class="searchbox">
+            <input id="searchdishes" type="search" placeholder="Search Our Recipes">
+        </div>
+        <div class="randommeal">
+            <h2>Featured Dish of the Day -</h2>
+            <div class="randommaincontainer">
+                <div class="randomdescription">
+                <h1>Dish: <span id="randomfoodname"></span></h1>
+                <h1>Type: <span id="typee"></span></h1>
+            </div>
+
+                <div class="randomimage" id="randomImage">
+                    <img id= "featured_dish"src="" alt="">
+                </div>
+            </div>
+        </div>
+        <div id="myModal" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal()">&times;</span>
+                <p>Ingredients: <span id="ingredients"></span></p>
+            </div>
+        </div>
+
+        <div class="searcheditems">
+            <h1>Your Searched Items =></h1>
+        </div>
+
+        <div class="last">
+            <h1>Made by Kshitij Kotecha</h1>
+        </div>
+
+    </div>
+
+</body>
+
+</html>
+
+<script src="app.js"></script>

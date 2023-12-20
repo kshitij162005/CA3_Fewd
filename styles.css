@@ -192,9 +192,6 @@ body{
 
 @media screen and (max-width: 800px) {
 
-
-
-
 .headingcontainer{
     display: flex;
     justify-content: space-between;

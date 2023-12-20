@@ -14,7 +14,7 @@ function openModal(foodName, type, ingredients) {
     modal.style.display = "block";
 }
 
-
+// random image and its description
 async function getrandom() {
     try {
         const response = await axios.get("https://www.themealdb.com/api/json/v1/1/random.php");
@@ -34,7 +34,7 @@ async function getrandom() {
     }
 }
 
-
+// loop for ingridients after which "The ingridients will be displayed on clicking the random image"
 function getIngredients(meal) {
     const ingredients = [];
     for (let i = 1; i <= 20; i++) {
@@ -49,11 +49,11 @@ function getIngredients(meal) {
 
 getrandom();
 
+// the close button is made functional which is in the modal
 function closeModal() {
     var modal = document.getElementById("myModal");
     modal.style.display = "none";
 }
-
 
 
 function searchOnEnter(event) {
@@ -63,6 +63,7 @@ function searchOnEnter(event) {
     }
 }
 
+// On searching the category of the food in the searchbar the output of the meals will be displayed 
 async function getsearched(searched) {
     try {
         let response = await axios.get(`https://www.themealdb.com/api/json/v1/1/filter.php?c=${searched}`);
@@ -95,6 +96,7 @@ async function getsearched(searched) {
             searchResultsBox.appendChild(block);
         });
 
+// if the category you have entered is not the found the error message i.e. "No results available will be displayed"
     } catch (err) {
         console.log("No results available");
     }

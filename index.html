@@ -26,41 +26,52 @@
         </div>
         <div class="about">
             <div class="aboutdescription">
-                 <p>EasyPeasyEats: Your culinary companion for stress-free, mouthwatering meals. Discover personalized recipes effortlessly, tailored to your taste. We simplify cooking with daily meal suggestions, making it easy for you to enjoy delicious dishes every day. Whether you're a seasoned chef or a beginner, EasyPeasyEats is your go-to source for simple, delightful cooking. Explore, cook, and savor the joy of hassle-free meals at your fingertips.</p>
+                <p>EasyPeasyEats: Your culinary companion for stress-free, mouthwatering meals. Discover personalized
+                    recipes effortlessly, tailored to your taste. We simplify cooking with daily meal suggestions,
+                    making it easy for you to enjoy delicious dishes every day. Whether you're a seasoned chef or a
+                    beginner, EasyPeasyEats is your go-to source for simple, delightful cooking. Explore, cook, and
+                    savor the joy of hassle-free meals at your fingertips.</p>
             </div>
         </div>
         <div class="searchbox">
-            <input id="searchdishes" type="search" placeholder="Search Our Recipes">
+            <input id="searchdishes" type="search" placeholder="Search Our Recipes" onkeydown="searchOnEnter(event)">
         </div>
         <div class="randommeal">
             <h2>Featured Dish of the Day -</h2>
             <div class="randommaincontainer">
                 <div class="randomdescription">
-                <h1>Dish: <span id="randomfoodname"></span></h1>
-                <h1>Type: <span id="typee"></span></h1>
-            </div>
+                    <h1>Dish: <span id="randomfoodname"></span></h1>
+                    <h1>Type: <span id="typee"></span></h1>
+                </div>
 
                 <div class="randomimage" id="randomImage">
-                    <img id= "featured_dish"src="" alt="">
+                    <img id="featured_dish" src="" alt="">
                 </div>
             </div>
         </div>
-        <div id="myModal" class="modal">
-            <div class="modal-content">
-                <span class="close" onclick="closeModal()">&times;</span>
-                <p>Ingredients: <span id="ingredients"></span></p>
-            </div>
-        </div>
+<div id="myModal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <h2>Ingredients:</h2>
+        <ul id="ingredientsList"></ul>
+    </div>
+</div>
+
+
 
         <div class="searcheditems">
-            <h1>Your Searched Items =></h1>
-        </div>
+            <div class="text">
+                <h1>Your Searched Items =></h1>
+            </div>
+            <div class="box">
+            </div>
 
-        <div class="last">
-            <h1>Made by Kshitij Kotecha</h1>
-        </div>
+            <div class="last">
+                <h1>Made with ❤️ by Kshitij Kotecha</h1>
+            </div>
 
-    </div>
+
+        </div>
 
 </body>
 

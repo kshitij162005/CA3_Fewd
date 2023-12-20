@@ -188,7 +188,14 @@ body{
     text-align: center;
 }
 
-
+.copyright{
+    width: 99%;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 10px;
+}
 
 @media screen and (max-width: 800px) {
 
@@ -339,6 +346,9 @@ body{
     margin-top: 5px;
     text-align: center;
 }
+
+
+
 
 
 

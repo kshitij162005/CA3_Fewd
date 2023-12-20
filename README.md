@@ -11,7 +11,7 @@ Make sure you have the following installed before you start:
 
 ### Installation
 
-No installation is required for EasyPeasyEats. You can simply visit our website at [www.easypeasyeats.com] and start exploring mouthwatering recipes right away.
+No installation is required for EasyPeasyEats. You can simply visit our website at [https://658275fb0bbcbe2dd7529fa8--lively-quokka-1b518d.netlify.app/] and start exploring mouthwatering recipes right away.
 
 ## Features
 

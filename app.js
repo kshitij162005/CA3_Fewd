@@ -68,39 +68,46 @@ async function getsearched(searched) {
     try {
         let response = await axios.get(`https://www.themealdb.com/api/json/v1/1/filter.php?c=${searched}`);
         let data = response.data;
-        
+
         var searchResultsBox = document.querySelector('.box');
-        searchResultsBox.innerHTML = ""; 
+        searchResultsBox.innerHTML = "";
 
-        data.meals.forEach(meal => {
-            var block = document.createElement("div");
-            block.className = "block";
+        // Check if there are meals available
+        if (data.meals && data.meals.length > 0) {
+            data.meals.forEach(meal => {
+                var block = document.createElement("div");
+                block.className = "block";
 
-            var searchImage = document.createElement("div");
-            searchImage.className = "searchimage";
-            var img = document.createElement("img");
-            img.className = "searchimages";
-            img.src = meal.strMealThumb;
-            searchImage.appendChild(img);
+                var searchImage = document.createElement("div");
+                searchImage.className = "searchimage";
+                var img = document.createElement("img");
+                img.className = "searchimages";
+                img.src = meal.strMealThumb;
+                searchImage.appendChild(img);
 
-            var searchName = document.createElement("div");
-            searchName.className = "searchname";
-            var h1 = document.createElement("h1");
-            h1.className = "searchnames";
-            h1.textContent = meal.strMeal;
-            searchName.appendChild(h1);
+                var searchName = document.createElement("div");
+                searchName.className = "searchname";
+                var h1 = document.createElement("h1");
+                h1.className = "searchnames";
+                h1.textContent = meal.strMeal;
+                searchName.appendChild(h1);
 
-            block.appendChild(searchImage);
-            block.appendChild(searchName);
+                block.appendChild(searchImage);
+                block.appendChild(searchName);
 
-            searchResultsBox.appendChild(block);
-        });
-
-// if the category you have entered is not the found the error message i.e. "No results available will be displayed"
+                searchResultsBox.appendChild(block);
+            });
+        } else {
+            // Display a text message when no results are found
+            var noResultsText = document.createElement("p");
+            noResultsText.textContent = "No results found.";
+            searchResultsBox.appendChild(noResultsText);
+        }
     } catch (err) {
-        console.log("No results available");
+        console.log("Error fetching data:", err);
     }
 }
+
 
 
 
